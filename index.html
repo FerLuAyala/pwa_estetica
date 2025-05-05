@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="manifest" href="manifest.json">
+
+ 
+
+  <title>PARCIAL-1</title>
+</head>
+
+<body>
+
+  <div class="lista">
+    <h1>Estetica</h1>
+    <h2>Turnos semanales</h2>
+
+
+    <div class="dia">
+
+      <input type="text" id="cliente" placeholder="Nombre del cliente">
+      <small id="smallCliente" style="color:red"></small>
+     
+      <select id="tarea">
+        <option value="" selected>Elije Tarea</option>
+        <option value="unias">Uñas</option>
+        <option value="pestanias">Pestañas</option>
+        <option value="depilacion">Depilación</option>
+        <option value="cejas">Cejas</option>
+        <option value="pigmentacion">Pigmentación</option>
+      </select>
+
+      <small id="smallTarea" style="color:red"></small>
+
+      <select id="dia">
+        <option value="" selected>Elije el Dia</option>
+        <option value="lunes">Lunes</option>
+        <option value="martes">Martes</option>
+        <option value="miercoles">Miércoles</option>
+        <option value="jueves">Jueves</option>
+        <option value="viernes">Viernes</option>
+      </select>     
+    
+      <small id="smallDia" style="color:red"></small>
+      
+      <button id="botonTarea">Añadir tarea</button>
+    </div>
+
+
+    <div class="tareas">
+      <h4>Lunes</h4>
+      <ul id="listaLunes"></ul>
+      <h4>Martes</h4>
+      <ul id="listaMartes"></ul>
+      <h4>Miércoles</h4>
+      <ul id="listaMiercoles"></ul>
+      <h4>Jueves</h4>
+      <ul id="listaJueves"></ul>
+      <h4>Viernes</h4>
+      <ul id="listaViernes"></ul>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+  <script src="scripts/semana.js"></script>
+  
+
+
+</body>
+
+</html>

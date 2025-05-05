@@ -1,0 +1,183 @@
+body {
+ 
+  background-image: url("../images/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.lista {
+  max-width: 800px;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: #ffe6f05b; /* Rosa suave de fondo */
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Títulos principales y subtítulos */
+h1 {
+  text-align: center;
+  color: #d6336c; 
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+h2 {
+  text-align: center;
+  color: #b22a52;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+/* Contenedor de entrada y botones */
+.dia {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+/* Inputs y select con estilo */
+input[type="text"], select {
+  padding: 10px;
+  border: 2px solid #f4a1c0;
+  border-radius: 8px;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus, select:focus {
+  border-color: #d6336c;
+  box-shadow: 0 0 8px rgba(214, 51, 108, 0.3);
+}
+
+/* Botón para añadir tarea */
+#botonTarea {
+  padding: 12px 20px;
+  background-color: #d6336c; /* Rosa fuerte */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#botonTarea:hover {
+  background-color: #b22a52;
+  transform: scale(1.05);
+}
+
+/* Lista de tareas por día */
+.tareas {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #fdf3f775;
+  border-radius: 10px;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  box-shadow: 0 0 8px rgba(214, 51, 108, 0.3);
+}
+
+h4 {
+  margin-bottom: 8px;
+  color: #d6336c;
+  font-size: 1.2em;
+  border-bottom: 2px solid #f4a1c0;
+  padding-bottom: 4px;
+}
+
+/* Listas de tareas */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Elementos de tarea */
+li {
+  background-color: #fff0f6; /* Rosa muy suave para tareas */
+  padding: 10px 15px;
+  border-radius: 12px;
+  text-transform: capitalize;
+  
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 8px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  position: relative;
+}
+
+/* Botones en cada tarea */
+li button {
+  border: none;
+  padding: 8px 12px;
+  margin: 0.5rem;
+text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: #db6387;
+  color: #ffe6f0;
+  width:35%;
+}
+
+li button:hover {
+  background-color: #b22a52;
+  transform: scale(1.05);
+}
+/* Estado de tarea terminada */
+.terminada {
+  background-color: #0ea121;
+  color: #ffe6f0;
+ 
+}
+.terminada:hover {
+  background-color: #055c10;
+  transform: scale(1.05);
+}
+
+/* Para pantallas pequeñas (máx 420px) */
+@media (min-width: 920px) {
+  .lista {
+    width: 90%;
+    padding: 15px;
+  }
+
+  /* Ajustar tamaño de textos */
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  h4 {
+    font-size: 1em;
+  }
+
+  input[type="text"], select {
+    font-size: 0.9em;
+  }
+
+  #botonTarea {
+    padding: 10px 16px;
+    font-size: 0.9em;
+  }
+
+  li {
+    
+    font-size: 0.9em;
+  }
+
+  li button{
+    margin-left: 3rem;
+    width: 20%;
+  }
+}
