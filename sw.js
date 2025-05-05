@@ -8,8 +8,7 @@ self.addEventListener('install', event => {
                 './index.html',
                 '/css/styles.css',
                 '/scripts/semana.js',
-                '/images/icon-192x192.png',
-                '/images/icon-512x512.png',
+                '/images/fondo.jpg',                
                 './manifest.json'
             ]);
         })

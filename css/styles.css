@@ -1,5 +1,5 @@
+/* Estilos base: para móviles pequeños (<420px) */
 body {
- 
   background-image: url("../images/fondo.jpg");
   background-size: cover;
   background-position: center;
@@ -7,31 +7,30 @@ body {
 }
 
 .lista {
-  max-width: 800px;
+  width: 100%;
   margin: 1rem auto;
   padding: 1rem;
-  background-color: #ffe6f05b; /* Rosa suave de fondo */
+  background-color: #ffe6f05b;
   border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-family: 'Arial', sans-serif;
+ text-transform: capitalize;
 }
 
-/* Títulos principales y subtítulos */
 h1 {
   text-align: center;
-  color: #d6336c; 
+  color: #d6336c;
   margin-bottom: 10px;
-  font-size: 2em;
+  font-size: 1.4em;
 }
 
 h2 {
   text-align: center;
   color: #b22a52;
   margin-bottom: 20px;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
-/* Contenedor de entrada y botones */
 .dia {
   display: flex;
   flex-direction: column;
@@ -39,12 +38,11 @@ h2 {
   margin-bottom: 30px;
 }
 
-/* Inputs y select con estilo */
 input[type="text"], select {
   padding: 10px;
   border: 2px solid #f4a1c0;
   border-radius: 8px;
-  font-size: 1em;
+  font-size: 0.9em;
   outline: none;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
@@ -54,14 +52,13 @@ input[type="text"]:focus, select:focus {
   box-shadow: 0 0 8px rgba(214, 51, 108, 0.3);
 }
 
-/* Botón para añadir tarea */
 #botonTarea {
-  padding: 12px 20px;
-  background-color: #d6336c; /* Rosa fuerte */
+  padding: 10px 16px;
+  background-color: #d6336c;
   color: #fff;
   border: none;
   border-radius: 10px;
-  font-size: 1em;
+  font-size: 0.9em;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
 }
@@ -71,7 +68,6 @@ input[type="text"]:focus, select:focus {
   transform: scale(1.05);
 }
 
-/* Lista de tareas por día */
 .tareas {
   display: flex;
   flex-direction: column;
@@ -86,98 +82,113 @@ input[type="text"]:focus, select:focus {
 h4 {
   margin-bottom: 8px;
   color: #d6336c;
-  font-size: 1.2em;
+  font-size: 1em;
   border-bottom: 2px solid #f4a1c0;
   padding-bottom: 4px;
 }
 
-/* Listas de tareas */
 ul {
   list-style: none;
   padding: 0;
 }
 
-/* Elementos de tarea */
 li {
-  background-color: #fff0f6; /* Rosa muy suave para tareas */
-  padding: 10px 15px;
-  border-radius: 12px;
-  text-transform: capitalize;
-  
-  justify-content: space-between;
+  display: flex;
   align-items: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  margin-bottom: 8px;
-  font-family: 'Arial', sans-serif;
-  font-weight: 600;
-  font-size: 1em;
-  position: relative;
+  justify-content: space-between;
+  background-color: #f7f7f7;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease;
+  font-size: 0.85em;
 }
 
-/* Botones en cada tarea */
+li input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  transform: scale(1.5);
+  margin-right: 12px;
+  cursor: pointer;
+  accent-color: #4CAF50;
+}
+
+
+.tarea-terminada {
+  background-color: #b8fa9993;
+  color: #111111;
+  opacity: 0.6;
+  font-style: italic;
+}
+
 li button {
+  background: none;
   border: none;
-  padding: 8px 12px;
-  margin: 0.5rem;
-text-align: center;
-  border-radius: 8px;
-  font-weight: bold;
-  background-color: #db6387;
-  color: #ffe6f0;
-  width:35%;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 1rem;
 }
 
-li button:hover {
-  background-color: #b22a52;
-  transform: scale(1.05);
-}
-/* Estado de tarea terminada */
-.terminada {
-  background-color: #0ea121;
-  color: #ffe6f0;
- 
-}
-.terminada:hover {
-  background-color: #055c10;
-  transform: scale(1.05);
+li button i.fa-trash-can {
+  color: #d6336c;
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
 
-/* Para pantallas pequeñas (máx 420px) */
+li button i.fa-trash-can:hover {
+  color: #ff3333;
+}
+
+li span{
+  display: none;
+}
+
+@media (min-width: 765px){
+  li span {
+    display: block;
+     margin-left: 10px;
+     font-size: 0.9em;
+     font-weight: 500;
+   }
+}
+
+/* Media query para pantallas grandes (≥ 920px) */
 @media (min-width: 920px) {
   .lista {
-    width: 90%;
-    padding: 15px;
+    width: 80%;
+    padding: 25px;
   }
 
-  /* Ajustar tamaño de textos */
   h1 {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   h2 {
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
 
   h4 {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 
   input[type="text"], select {
-    font-size: 0.9em;
+    font-size: 1.1em;
   }
 
   #botonTarea {
-    padding: 10px 16px;
-    font-size: 0.9em;
+    padding: 14px 22px;
+    font-size: 1.1em;
   }
 
   li {
-    
-    font-size: 0.9em;
+    font-size: 1em;
   }
 
-  li button{
+  li button {
     margin-left: 3rem;
     width: 20%;
   }
+  
+
 }
