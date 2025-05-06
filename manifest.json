@@ -7,15 +7,11 @@
     "theme_color": "#d6336c",
     "icons": [
       {
-        "src": "images/icon-192x192.png",
-        "type": "image/png",
-        "sizes": "192x192"
-      },
-      {
-        "src": "images/icon-512x512.png",
-        "type": "image/png",
-        "sizes": "512x512"
+        "src": "images/fondo_de_pwa.jpg",
+        "type": "image/jpg",
+        "sizes": "1024x1024"
       }
+      
     ]
   }
   
